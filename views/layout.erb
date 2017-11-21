@@ -23,24 +23,9 @@
   </head>
   <body>
     <div class='container main' >
-      <header class='row' >
-        <form>
-          <div class="input-group input-group-lg">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-book"></span></span>
-            <input type="text" name='repo' class="form-control" placeholder="username/repo">
-          </div>
-        </form>
-      </header>
       <div class='row'>
         <%= yield %>
       </div>
-      <footer class="footer">
-        <img src='/images/BE.png' alt='thanks to @bdc'/> Made by <a href='http://yannick.io'>Yannick</a> with love in Belgium
-        <div class="social">
-          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://forked.yannick.io" data-via="yann_ck" data-hashtags="forked">Tweet</a>
-          <div class="fb-like" data-href="http://forked.yannick.io" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-        </div>
-      </footer>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>

@@ -1,3 +1,20 @@
+<h2>
+    What is this about?
+</h2>
+<p>
+
+For the development of Nautilus, we'd like to use the git fork and pull model.
+
+This website's intent is to make it easier for the user to determine which fork
+to use.
+
+The algorithm right now is very simple and can be adjusted on various parameter.
+
+But don't trust my word here. Run the app yourself and see what fork you should
+be using.
+
+For more information, visit <a href="https://github.com/diminator/nautilus/pull/5">https://github.com/diminator/nautilus/pull/5</a>
+</p>
 <% if forks == [] %>
   <h3><span class="glyphicon glyphicon-thumbs-down"></span><%= @repo %> is all but popular!</h3>
 <% else %>
@@ -6,6 +23,7 @@
     <tr>
       <th><span class="glyphicon glyphicon-book"></span></th>
       <th class="sortable"><span class="glyphicon glyphicon-star"></span> Stars</th>
+      <th class="sortable"><span class="fa fa-eye"></span> Watchers</th>
       <th class="sortable"><span class="fa fa-code-fork"></span> Forks</th>
       <th class="sortable"><span class="fa fa-meh-o"></span> Open Issues</th>
       <th class="sortable"><span class="glyphicon glyphicon-calendar"></span> Last update</th>
@@ -19,3 +37,23 @@
   </tbody>
 </table>
 <% end %>
+
+<h2>Current scoring algorithm</h2>
+
+We've simply taken <a href="https://github.com/ys/forked">https://github.com/ys/forked</a>'s scoring
+algorithm for forks. There can be much better algorithms.
+To see how this page's algorithm works, checkout the code here <a href="https://github.com/TimDaub/forked">https://github.com/TimDaub/forked</a>
+or fork the repo to implement you own/better algorithm.
+
+<h2>Shameless plug</h2>
+
+The best fork of nautilus is of course TimDaub/nautilus. Why? Because it's very
+good.
+
+
+<h2>You're still not convinced?</h2>
+
+<marquee>Well OK then, here's a sparkling unicorn!
+<br/>
+<img src="images/unicorn.gif" />
+</marquee>

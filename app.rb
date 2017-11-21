@@ -29,14 +29,10 @@ class App < Sinatra::Base
   end
 
   get '/' do
-    cache_control :public, max_age: 3600  # 60 mins.
-    erb :home
-  end
-
-  get '/:username/:repo' do
     cache_control :public, max_age: 1800  # 30 mins.
     begin
-      @repo = "#{params[:username]}/#{params[:repo]}"
+      # TODO: Make this env var
+      @repo = "TimDaub/nautilus"
       original = GithubRepos.new(@repo).original
       forks = GithubRepos.new(original.full_name).popular_forks
       erb :forks, locals: { original: original, forks: forks }
